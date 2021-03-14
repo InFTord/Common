@@ -19,10 +19,18 @@ using System;
 namespace Emzi0767.Serialization
 {
     /// <summary>
-    /// <para>Specifies that this 64-bit integer uses no more than 53 bits to represent its value.</para>
-    /// <para>This is used to indicate that large numbers are safe for direct serialization into formats which do support 64-bit integers natively (such as JSON).</para>
+    /// <para>Specifies that this <see cref="TimeSpan"/> will be serialized as a number of whole seconds.</para>
+    /// <para>This value will always be serialized as a number.</para>
     /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-    public sealed class Int53Attribute : SerializationAttribute
+    public sealed class TimeSpanSecondsAttribute : SerializationAttribute
+    { }
+
+    /// <summary>
+    /// <para>Specifies that this <see cref="TimeSpan"/> will be serialized as a number of whole milliseconds.</para>
+    /// <para>This value will always be serialized as a number.</para>
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
+    public sealed class TimeSpanMillisecondsAttribute : SerializationAttribute
     { }
 }

@@ -23,7 +23,7 @@ namespace Emzi0767.Serialization
     /// <para>This value will always be serialized as a number.</para>
     /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-    public sealed class UnixSecondsAttribute : Attribute
+    public sealed class UnixSecondsAttribute : SerializationAttribute
     { }
 
     /// <summary>
@@ -31,6 +31,6 @@ namespace Emzi0767.Serialization
     /// <para>This value will always be serialized as a number.</para>
     /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-    public sealed class UnixMillisecondsAttribute : Attribute
+    public sealed class UnixMillisecondsAttribute : SerializationAttribute
     { }
 }

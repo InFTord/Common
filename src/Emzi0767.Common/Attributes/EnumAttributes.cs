@@ -23,7 +23,7 @@ namespace Emzi0767.Serialization
     /// <para>This is used to change the behaviour of enum serialization.</para>
     /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-    public sealed class NumericEnumAttribute : Attribute
+    public sealed class NumericEnumAttribute : SerializationAttribute
     { }
 
     /// <summary>
@@ -31,6 +31,6 @@ namespace Emzi0767.Serialization
     /// <para>This is used to change the behaviour of enum serialization.</para>
     /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-    public sealed class StringEnumAttribute : Attribute
+    public sealed class StringEnumAttribute : SerializationAttribute
     { }
 }
